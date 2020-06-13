@@ -11,7 +11,7 @@ Status: **active development**. [Release notes](./releases.md).
 
 ## Documentation
 
-- User guide. TBA
+- [User guide](https://hcmid.github.io/orthography/)
 - API docs. TBA
 
 ## License
