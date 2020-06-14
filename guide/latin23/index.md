@@ -1,19 +1,8 @@
 ---
-title: MID orthography library
+title: The Latin23 orthography
 layout: page
 ---
 
-
-
-
-## The `MidOrthography` trait
-
-
-- valid characters
-- semantics, and therefore tokenizing
-
-
-Most
 
 ## Example implementation
 
