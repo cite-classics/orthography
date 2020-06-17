@@ -4,6 +4,8 @@ layout: page
 ---
 
 
+**Version 1.1.0**
+
 ## Example implementation
 
 `Latin23` is an orthography using 23 alphabetic letters from the Latin alphabet.  So we'll import the library, and see what `Latin23` can do.

@@ -21,7 +21,7 @@ trait MidOrthography {
   * @param s String to check.
   */
   def hiliteBadCps(s: String) : String = {
-    val cps =  strToCps(s)
+    val cps =  UnicodeUtils.stringToCps(s)
     hiliteBadCps(cps)
   }
 
@@ -50,19 +50,10 @@ trait MidOrthography {
   * @param s String to test.
   */
   @JSExport def validString(s: String): Boolean = {
-    val tf = strToCps(s).map(validCP(_)).distinct
+    val tf = UnicodeUtils.stringToCps(s).map(validCP(_)).distinct
     ((tf.size == 1) && (tf(0) == true))
   }
 
-  /** Turn a string into a Vector of code points. */
-	@JSExport  def strToCps(s: String, cpVector: Vector[Int] = Vector.empty[Int], idx : Int = 0) : Vector[Int] = {
-		if (idx >= s.length) {
-			cpVector
-		} else {
-			val cp = s.codePointAt(idx)
-			strToCps(s, cpVector :+ cp, idx + java.lang.Character.charCount(cp))
-		}
-	}
 
   /** Token categories recognizable from the semantics
   * of this orthography.

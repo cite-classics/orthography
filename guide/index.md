@@ -4,7 +4,7 @@ layout: page
 ---
 
 
-
+**Version @VERSION@**
 
 ## The `MidOrthography` trait
 
