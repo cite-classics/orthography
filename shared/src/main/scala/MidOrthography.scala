@@ -11,6 +11,36 @@ import scala.scalajs.js.annotation._
 */
 trait MidOrthography {
 
+
+  /////////////////////////////////////////
+  // Abstract methods
+  //
+  /** Label for this orthographic system.*/
+  def orthography: String
+
+  /** True if code point is valid */
+  def validCP(cp: Int): Boolean
+
+  /** Token categories recognizable from the semantics
+  * of this orthography.
+  */
+  def tokenCategories : Vector[MidTokenCategory]
+
+  /** Tokenize a String in this othography.
+  *
+  * @param n CitableNode to tokenize.
+  */
+  def tokenizeNode(n: CitableNode): Vector[MidToken]
+
+  /** Value for exemplar ID in tokenzied editions. */
+  def exemplarId: String
+
+
+
+  /////////////////////////////////////////
+  //
+  // Concrete members
+  //
   /** Unicode code point for asterisk character.*/
   val asteriskCp = 0x002A
   val spaceCp = 0x0020
@@ -39,11 +69,7 @@ trait MidOrthography {
   //points: Array[Int] = Array(127474, 127462)
   //cala> val string = new String(points, 0, points.length)
   }
-  /** Label for this orthographic system.*/
-  def orthography: String
 
-  /** True if code point is valid */
-  def validCP(cp: Int): Boolean
 
   /** True if all code points in s are valid.
   *
@@ -55,16 +81,6 @@ trait MidOrthography {
   }
 
 
-  /** Token categories recognizable from the semantics
-  * of this orthography.
-  */
-  def tokenCategories : Vector[MidTokenCategory]
-
-  /** Tokenize a String in this othography.
-  *
-  * @param n CitableNode to tokenize.
-  */
-  def tokenizeNode(n: CitableNode): Vector[MidToken]
 
 
   /** Tokenize a `Corpus` into a Vector of [MidToken]s.

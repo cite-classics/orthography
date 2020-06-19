@@ -41,4 +41,8 @@ class Latin23Spec extends FlatSpec {
     assert(hilited == expected)
   }
 
+  it should "identify a value for exemplar ID" in {
+    assert(Latin23.exemplarId == "lat23tkn")
+  }
+
 }

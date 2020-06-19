@@ -16,6 +16,7 @@ object Latin23 extends MidOrthography {
   /** Label for this orthographic system.*/
   def orthography: String = "Simple white-space tokenization for testing"
 
+  def exemplarId = "lat23tkn"
 
   // named code points
   /** Tab character.*/
@@ -71,9 +72,8 @@ object Latin23 extends MidOrthography {
   /** Tokenize a CitableNode in this othography.
   *
   * @param n CitableNode to tokenize.
-  * @param exemplarId Value to use for exemplar identifier in exemplar-level URN.
   */
-  def tokenizeNode(n: CitableNode, exemplarId: String = "tkn"): Vector[MidToken] = {
+  def tokenizeNode(n: CitableNode): Vector[MidToken] = {
 
     val simplePunct = "([\\.;?,])".r
     val punctList = "\\.;?,"
@@ -93,13 +93,6 @@ object Latin23 extends MidOrthography {
     raw.toVector
   }
 
-  /** Tokenize a CitableNode in this othography.
-  *
-  * @param n CitableNode to tokenize.
-  */
-  def tokenizeNode(n: CitableNode):  Vector[MidToken] = {
-    tokenizeNode(n, "tkn")
-  }
 
   /** Write a description of this orthography in the notatoin of
   * the Stuttgart FST toolkit.
