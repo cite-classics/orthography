@@ -12,7 +12,7 @@ Status: **active development**. [Release notes](./releases.md).
 ## Documentation
 
 - [User guide](https://hcmid.github.io/orthography/)
-- API docs. TBA
+- [API docs](https://hcmid.github.io/apidocs/orthography/api/edu/holycross/shot/mid/orthography/index.html)
 
 ## License
 
