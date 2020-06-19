@@ -4,7 +4,7 @@ layout: page
 ---
 
 
-**Version 1.1.0**
+**Version 2.0.0**
 
 ## Example implementation
 
@@ -47,52 +47,52 @@ And tokenize it:
 val tokens = Latin23.tokenizeNode(citableNode)
 // tokens: Vector[MidToken] = Vector(
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.0"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.0"),
 //     "iam",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.1"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.1"),
 //     "primum",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.2"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.2"),
 //     "omnium",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.3"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.3"),
 //     "satis",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.4"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.4"),
 //     "constat",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.5"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.5"),
 //     "Troia",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.6"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.6"),
 //     "capta",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.7"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.7"),
 //     "in",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.8"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.8"),
 //     "ceteros",
 //     Some(LexicalToken)
 //   ),
 //   MidToken(
-//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.9"),
+//     CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.9"),
 //     "saevitum",
 // ...
 ```
@@ -127,52 +127,53 @@ And then tokenize it:
 val tokenCorpus = Latin23.tokenizedCorpus(sourceCorpus)
 // tokenCorpus: Corpus = Corpus(
 //   Vector(
-//     CitableNode(CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.0"), "iam"),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.1"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.0"),
+//       "iam"
+//     ),
+//     CitableNode(
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.1"),
 //       "primum"
 //     ),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.2"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.2"),
 //       "omnium"
 //     ),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.3"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.3"),
 //       "satis"
 //     ),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.4"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.4"),
 //       "constat"
 //     ),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.5"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.5"),
 //       "Troia"
 //     ),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.6"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.6"),
 //       "capta"
 //     ),
-//     CitableNode(CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.7"), "in"),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.8"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.7"),
+//       "in"
+//     ),
+//     CitableNode(
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.8"),
 //       "ceteros"
 //     ),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.9"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.9"),
 //       "saevitum"
 //     ),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.10"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.10"),
 //       "esse"
 //     ),
 //     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.11"),
+//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.lat23tkn:1.1.1.11"),
 //       "Troianos"
-//     ),
-//     CitableNode(CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.12"), ";"),
-//     CitableNode(
-//       CtsUrn("urn:cts:omar:stoa0179.stoa001.omar.tkn:1.1.1.13"),
-//       "duobus"
 // ...
 ```
 
