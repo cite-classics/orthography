@@ -3,7 +3,7 @@
 Abstraction of orthographic systems and tokenization in MID editions.
 
 
-## Current version: 2.0.0
+## Current version: 2.1.0
 
 Status: **active development**. [Release notes](./releases.md).
 
