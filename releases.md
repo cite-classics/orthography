@@ -1,6 +1,8 @@
 # MID orthography: release notes
 
-**2.1.0**:  Adds `TokenizableCorpus` class.
+**2.2.0**:  Publishing to terracotta.hpcc.uh.edu.
+
+**2.1.0**:  adds `tokenizablecorpus` class.
 
 **2.0.0**: `MidOrthography` now requires method identifying value for example ID in tokenized editions it produces.
 
